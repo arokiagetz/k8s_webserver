@@ -153,9 +153,16 @@ web-server-service   LoadBalancer   100.64.69.160   ab365290f702511e9a3670624a89
 Please allow some for the LB to connect to the instances and Pod to be available.
  
 
-## Finally, we have our web-page available in AWS Kubernetes Cluster which will be always available and scalable according to business requirement.
+###### Finally, we have our web-page available in AWS Kubernetes Cluster which will be always available and scalable according to business requirement. 
 
-![Web-Page](https://github.com/arokiagetz/k8s_webserver/blob/master/img1.png)
+Below is the screenshot from AWS LB.
+
+![LB](https://github.com/arokiagetz/k8s_webserver/blob/master/img2.png)
+
+
+Below is the screenshot accessed from local k8s ip on port 30080.
+
+![Local](https://github.com/arokiagetz/k8s_webserver/blob/master/img1.png)
 
 ## Do not forget to destroy your k8s cluster, not to get charged by AWS. Run the below command to stop and delete your cluster
 
