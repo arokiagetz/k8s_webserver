@@ -1,6 +1,6 @@
 # k8s_webserver
 
-###### Have used Kubernetes to acheive highly available WebServer which can host my "Hello World" container.
+###### Follow below steps to have Hello-World Web-Page hosted in NGINX as a Pod(container) in Kubernetes. Have used Kubernetes to acheive highly available WebServer container.
 
 We Require 3 things to have a highly scable and available Web Page:
 1. Docker Image which has NGINX to host my application
