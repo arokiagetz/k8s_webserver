@@ -137,7 +137,6 @@ Below steps if you run the k8s cluster locally
 
 #Exposing the nodePort 30080, you should access the http://cluster-ip:30080 to access the service.
 kubectl apply -f web-server-services-local.yaml
-
 ```
 ## YOU ARE ALMOST THERE
 
@@ -155,6 +154,8 @@ Please allow some for the LB to connect to the instances and Pod to be available
  
 
 ## Finally, we have our web-page available in AWS Kubernetes Cluster which will be always available and scalable according to business requirement.
+
+![Web-Page](https://github.com/arokiagetz/k8s_webserver/blob/master/img1.png)
 
 ## Do not forget to destroy your k8s cluster, not to get charged by AWS. Run the below command to stop and delete your cluster
 
