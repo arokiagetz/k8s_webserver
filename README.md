@@ -9,7 +9,7 @@ We Require 3 things to have a highly scable and available Web Page:
 
 
 ## 1. Docker Image 
-Clone the git repositor, build Docker Image by executing the docker build script with a version number
+Clone the git repositor, build Docker Image by executing the docker build script which available within the directory "ci" with a version number
 
 ``` ./docker_build $VERSION_NUMBER ```
 
