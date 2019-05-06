@@ -1,6 +1,6 @@
 # k8s_webserver
 
-# Have used Kubernetes to make highly available WebServer which can host my "Hello World" container.
+## Have used Kubernetes to make highly available WebServer which can host my "Hello World" container.
 
 We Require 3 things to have a highly scable and available Web Page:
 1. Docker Image which has NGINX to host my application
@@ -131,6 +131,13 @@ kubectl apply -f web-server-deployment.yaml
 #To deploy the service. Since the deployment is in Cloud Platform, service is exposed Load Balancer.
 #All the Pods with matching labels "app: web-server" will be accessed by the below service
 kubectl apply -f web-server-services-cloud.yaml
+
+###########
+Below steps if you run the k8s cluster locally
+
+#Exposing the nodePort 30080, you should access the http://cluster-ip:30080 to access the service.
+kubectl apply -f web-server-services-local.yaml
+
 ```
 ## YOU ARE ALMOST THERE
 
@@ -143,18 +150,21 @@ NAME                 TYPE           CLUSTER-IP      EXTERNAL-IP                 
 kubernetes           ClusterIP      100.64.0.1      <none>                                                                   443/TCP        1h
 web-server-service   LoadBalancer   100.64.69.160   ab365290f702511e9a3670624a8928ee-202673565.eu-west-2.elb.amazonaws.com   80:32273/TCP   57m
 ```
-## External IP(ab365290f702511e9a3670624a8928ee-202673565.eu-west-2.elb.amazonaws.com)is the LB Link to access your application.
+###### External IP(ab365290f702511e9a3670624a8928ee-202673565.eu-west-2.elb.amazonaws.com)is the LB Link to access your application.
 Please allow some for the LB to connect to the instances and Pod to be available.
  
 
-# Finally, we have our web-page available in AWS Kubernetes Cluster which will be always available and scalable according to business requirement.
+## Finally, we have our web-page available in AWS Kubernetes Cluster which will be always available and scalable according to business requirement.
 
-# Do not forget to destroy your k8s cluster, not to get charged by AWS. Run the below command to stop and delete your cluster
+## Do not forget to destroy your k8s cluster, not to get charged by AWS. Run the below command to stop and delete your cluster
 
 ```
-kops delete cluster --name $NAME
-```
+#Below command will stop and delete the cluster
+kops delete cluster --name $NAME --yes
 
+#Wait until you see the message 
+Deleted cluster: "k8s-web-server.k8s.local"
+```
 
 
 
