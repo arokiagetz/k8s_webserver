@@ -1,6 +1,6 @@
 # k8s_webserver
 
-######## Have used Kubernetes to acheive highly available WebServer which can host my "Hello World" container.
+###### Have used Kubernetes to acheive highly available WebServer which can host my "Hello World" container.
 
 We Require 3 things to have a highly scable and available Web Page:
 1. Docker Image which has NGINX to host my application
