@@ -150,7 +150,7 @@ kubernetes           ClusterIP      100.64.0.1      <none>                      
 web-server-service   LoadBalancer   100.64.69.160   ab365290f702511e9a3670624a8928ee-202673565.eu-west-2.elb.amazonaws.com   80:32273/TCP   57m
 ```
 ###### External IP(ab365290f702511e9a3670624a8928ee-202673565.eu-west-2.elb.amazonaws.com)is the LB Link to access your application.
-Please allow some for the LB to connect to the instances and Pod to be available.
+#Please allow some for the LB to connect to the instances and Pod to be available.
  
 
 ###### Finally, we have our web-page available in AWS Kubernetes Cluster which will be always available and scalable according to business requirement. 
@@ -170,7 +170,7 @@ Below is the screenshot accessed from local k8s ip on port 30080.
 #Below command will stop and delete the cluster
 kops delete cluster --name $NAME --yes
 
-#Wait until you see the message 
+#Wait until you see the below message 
 Deleted cluster: "k8s-web-server.k8s.local"
 ```
 
