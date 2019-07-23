@@ -1,0 +1,11 @@
+apiVersion: skaffold/v1beta10
+kind: Config
+build:
+  artifacts:
+  - image: arokiagetz/k8s-web-server:v1
+deploy:
+  kubectl:
+    manifests:
+    - kubernetes/web-server-deployment.yaml
+    - kubernetes/web-server-services-cloud.yaml
+    - kubernetes/web-server-services-local.yaml

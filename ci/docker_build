@@ -10,7 +10,7 @@ fi
 
 TAG=$1
 echo "Going to tag docker containter with tag: $TAG "
-docker build -f Dockerfile -t arokiagetz/k8s-web-server:v$TAG .
+docker build -f Dockerfile -t arokiagetz/k8s-web-server:$TAG .
 docker push arokiagetz/k8s-web-server:v$TAG
-echo "Pushed Docker Image to arokiagetz/k8s-web-server:v$TAG"
+echo "Pushed Docker Image to arokiagetz/k8s-web-server:$TAG"
 
